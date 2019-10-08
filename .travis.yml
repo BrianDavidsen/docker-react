@@ -3,8 +3,8 @@ services:
   - docker
 
 before-install:
-  - ls -la
-  - docker build -t myapp -f Dockerfile.dev .
+- ls -la
+- docker build -t myapp -f Dockerfile.dev .
 
 script:
-  - docker run myapp npm run test -- --coverage
+- docker run myapp npm run test -- --coverage
