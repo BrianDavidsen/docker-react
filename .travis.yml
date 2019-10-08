@@ -4,6 +4,7 @@ services:
   - docker
 
 before-install:
+  - ls -la
   - docker build -t briandavidsen/docker-react -f ./Dockerfile.dev .
 
 script:
