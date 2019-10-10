@@ -4,7 +4,7 @@ services:
 
 before_script: 
   - ls
+  - docker build -t myapp -f Dockerfile.dev .
 
 script:
-  - docker build -t myapp -f Dockerfile.dev .
   - docker run myapp npm run test -- --coverage
