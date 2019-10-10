@@ -2,13 +2,9 @@ sudo: required
 services:
   - docker
 
-before-install:
+before-script:
   - ls -la
-  - docker pull node:alpine
-  - docker build -t myapp .
+  - docker build -t myapp -f Dockerfile.dev .
 
 script:
-  - ls -la
-  - docker pull node:alpine
-  - docker build -t myapp .
   - docker run myapp npm run test -- --coverage
