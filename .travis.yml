@@ -8,4 +8,7 @@ before-install:
   - docker build -t myapp .
 
 script:
+  - ls -la
+  - docker pull node:alpine
+  - docker build -t myapp .
   - docker run myapp npm run test -- --coverage
