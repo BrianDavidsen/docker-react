@@ -2,9 +2,6 @@ sudo: required
 services:
   - docker
 
-before-script:
-  - docker build -t myapp .
-
 script:
-  - docker build -t myapp .
+  - docker build -t myapp -f Dockerfile.dev .
   - docker run myapp npm run test -- --coverage
