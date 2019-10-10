@@ -4,6 +4,7 @@ services:
 
 before-install:
   - ls -la
+  - docker pull node:alpine
   - docker build -t myapp .
 
 script:
