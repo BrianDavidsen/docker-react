@@ -7,4 +7,4 @@ before_script:
   - docker build -t myapp -f Dockerfile.dev .
 
 script:
-  - docker run myapp npm run test -- --coverage
+  - docker run -e CI=true myapp npm run test
