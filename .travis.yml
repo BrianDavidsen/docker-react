@@ -10,7 +10,7 @@ script:
   - docker run -e CI=true myapp npm run test
 
 deploy:
-  provider: elasticbeanstak
+  provider: elasticbeanstalk
   region: "us-east-1"
   app: "myReactApp"
   env: "Myreactapp-env"
