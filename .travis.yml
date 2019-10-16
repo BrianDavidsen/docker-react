@@ -9,18 +9,18 @@ before_script:
 script:
   - docker run -e CI=true myapp npm run test
 
-deploy:
-  provider: elasticbeanstalk
-  region: "us-east-1"
-  app: "myReactApp"
-  env: "Myreactapp-env"
-  bucket_name: "elasticbeanstalk-us-east-1-167305595830"
-  bucket_path: "myReactApp"
-  on:
-    branch: master
-  access_key_id: 
-    secure: "$AWS_ACCESS_KEY"
-  secret_access_key:
-    secure: "$AWS_SECRET_KEY"
+#deploy:
+#  provider: elasticbeanstalk
+#  region: "us-east-1"
+#  app: "myReactApp"
+#  env: "Myreactapp-env"
+#  bucket_name: "elasticbeanstalk-us-east-1-167305595830"
+#  bucket_path: "myReactApp"
+#  on:
+#    branch: master
+#  access_key_id: 
+#    secure: "$AWS_ACCESS_KEY"
+#  secret_access_key:
+#    secure: "$AWS_SECRET_KEY"
   
 
